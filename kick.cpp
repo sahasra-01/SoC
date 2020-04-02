@@ -9,17 +9,17 @@ int pos_post;
 int solve(){
 	pos_post = 0;
 
-	int n = 100000;
-	// int n;
-	// cin >> n;
+	// int n = 100000;
+	int n;
+	cin >> n;
 
 	pair <int, int> a[n];
 
 	int x;
 	int max = 0;
 	for(int i=0; i<n; i++){
-		// cin >> x;
-		x = i*10000;
+		cin >> x;
+		// x = i*10000;
 		if(max < x)
 			max = x;
 

@@ -11,6 +11,9 @@ int main(){
    	cin >> n;
    	int x, cnt=0;
     
+/*
+Second Guy can win only if there are only even no(s).   
+*/    
    	for(int i=0; i<n; i++){
    		cin >> x;
    		if(x%2)

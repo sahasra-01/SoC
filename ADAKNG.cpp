@@ -7,9 +7,10 @@ int solve(){
 	int r, c, k;
 	cin >> r >> c >> k;
 
-	int a=0, b=0;
+	int a=0, b=0;				//Blocks where king can go will form a rectangle
 
-	if(k+r <= 8)	a+=k;
+/*Extreme Cases*/
+	if(k+r <= 8)	a+=k;		
 	else			a+=8-r;
 
 	if(k+c <= 8)	b+=k;
