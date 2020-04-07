@@ -8,9 +8,9 @@
 4. Stack and Queue
 5. Recursion
 6. Greedy Algorithms:
-..* Fractional and Binary Knapsack
-..* Job Sequencing
-..* Activity Selection
+..1. Fractional and Binary Knapsack
+..2. Job Sequencing
+..3. Activity Selection
 7. Dynamic Programming
 8. Priority Queue (Heaps)
 
