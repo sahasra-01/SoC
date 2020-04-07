@@ -15,8 +15,7 @@
 8. Priority Queue (Heaps)
 
 ##Problems attempted/solved:
-1. CodeChef Long Challenge (April 2020):<br >
-Solved 7 out of 8 problems (Score: 674.675/800)
+1. CodeChef Long Challenge (April 2020):
 ..*[REBIT](https://www.codechef.com/viewsolution/31283022) Expression Parsing
 ..*[ANSLEAK](https://www.codechef.com/viewsolution/31219502)
 ..*[SQRDSUB](https://www.codechef.com/viewsolution/31186439)
@@ -29,7 +28,7 @@ Solved 7 out of 8 problems (Score: 674.675/800)
 4. [MAXDIF](https://www.codechef.com/viewsolution/30626674)
 5. [CEILRCPT](https://www.codechef.com/viewsolution/30623705)
 6. [PRFXGD](https://www.codechef.com/viewsolution/30815934)
-7. [TREEGAME](https://www.codechef.com/viewsolution/30709220)
+7. [TREEGAME](https://www.codechef.com/viewsolution/30709220) WA
 8. [ADAKNG](https://www.codechef.com/viewsolution/30702597)
 9. [CAKEDOOM](https://www.codechef.com/viewsolution/30684094)
 10. [MYSARA](https://www.codechef.com/viewsolution/30678954)
