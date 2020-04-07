@@ -1,5 +1,5 @@
 # Report 1
-### Date: 10th April, 2020
+#### Date: 10th April, 2020
 
 ## Topics covered so far:
 1. Time Complexity (Big-O notation)
@@ -33,3 +33,8 @@
 9. [CAKEDOOM](https://www.codechef.com/viewsolution/30684094) WA
 10. [MYSARA](https://www.codechef.com/viewsolution/30678954)
 11. [GODSEND](https://codeforces.com/contest/841/submission/74162828)
+
+
+#### Link to other solutions: 
+1. [sahasra-01/QuarCode](https://github.com/sahasra-01/QuarCode)
+2. [sahasra-01/CompProg](https://github.com/sahasra-01/CompProg)
