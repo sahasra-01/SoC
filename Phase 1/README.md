@@ -8,21 +8,21 @@
 4. Stack and Queue
 5. Recursion
 6. Greedy Algorithms:
-..1. Fractional and Binary Knapsack
-..2. Job Sequencing
-..3. Activity Selection
+- Fractional and Binary Knapsack
+- Job Sequencing
+- Activity Selection
 7. Dynamic Programming
 8. Priority Queue (Heaps)
 
 ## Problems attempted/solved:
 1. CodeChef Long Challenge (April 2020):
-..* [REBIT](https://www.codechef.com/viewsolution/31283022) Expression Parsing
-..* [ANSLEAK](https://www.codechef.com/viewsolution/31219502)
-..* [SQRDSUB](https://www.codechef.com/viewsolution/31186439)
-..* [UNITGCD](https://www.codechef.com/viewsolution/31069617)
-..* [STRNO](https://www.codechef.com/viewsolution/31104723)
-..* [CARSELL](https://www.codechef.com/viewsolution/31018191)
-..* [COVIDLQ](https://www.codechef.com/viewsolution/31019999)
+- [REBIT](https://www.codechef.com/viewsolution/31283022) Expression Parsing
+- [ANSLEAK](https://www.codechef.com/viewsolution/31219502)
+- [SQRDSUB](https://www.codechef.com/viewsolution/31186439)
+- [UNITGCD](https://www.codechef.com/viewsolution/31069617)
+- [STRNO](https://www.codechef.com/viewsolution/31104723)
+- [CARSELL](https://www.codechef.com/viewsolution/31018191)
+- [COVIDLQ](https://www.codechef.com/viewsolution/31019999)
 2. [IPCTRAIN](https://www.codechef.com/viewsolution/31045311) WA, Priority queue
 3. [SWPDGT](https://www.codechef.com/viewsolution/30825022)
 4. [MAXDIF](https://www.codechef.com/viewsolution/30626674)
