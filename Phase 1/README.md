@@ -30,6 +30,6 @@
 6. [PRFXGD](https://www.codechef.com/viewsolution/30815934)
 7. [TREEGAME](https://www.codechef.com/viewsolution/30709220) WA
 8. [ADAKNG](https://www.codechef.com/viewsolution/30702597)
-9. [CAKEDOOM](https://www.codechef.com/viewsolution/30684094)
+9. [CAKEDOOM](https://www.codechef.com/viewsolution/30684094) WA
 10. [MYSARA](https://www.codechef.com/viewsolution/30678954)
 11. [GODSEND](https://codeforces.com/contest/841/submission/74162828)
