@@ -16,10 +16,11 @@
 
 ## Problems attempted/solved:
 1. CodeChef Long Challenge (April 2020):
-- [REBIT](https://www.codechef.com/viewsolution/31283022) Expression Parsing
+- [REBIT](https://www.codechef.com/viewsolution/31283022) Expression Parsing (Stack)
 - [ANSLEAK](https://www.codechef.com/viewsolution/31219502)
 - [SQRDSUB](https://www.codechef.com/viewsolution/31186439)
 - [UNITGCD](https://www.codechef.com/viewsolution/31069617)
+- [FCTRE](https://www.codechef.com/submit/complete/31547631) WA
 - [STRNO](https://www.codechef.com/viewsolution/31104723)
 - [CARSELL](https://www.codechef.com/viewsolution/31018191)
 - [COVIDLQ](https://www.codechef.com/viewsolution/31019999)
