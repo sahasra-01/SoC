@@ -27,7 +27,7 @@ int area(vector <int> &a){
 		 		if(s.empty()){
 		 			ar_temp = a[temp]*i;
 		 		}else{
-		 			ar_temp = a[temp]*(i-temp);
+		 			ar_temp = a[temp]*(i-s.top()-1);
 		 		}
 		 		// cout << temp<< " " << i << " "<< ar_temp << "    7\n";
 		 		if(ar_temp > ar)
@@ -47,7 +47,7 @@ int area(vector <int> &a){
  		if(s.empty()){
  			ar_temp = a[temp]*i;
  		}else{
- 			ar_temp = a[temp]*(i-temp);
+ 			ar_temp = a[temp]*(i-s.top()-1);
  		}
 		// cout << temp<<" "<< ar_temp << '\n';
 
