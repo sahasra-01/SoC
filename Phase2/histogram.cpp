@@ -1,87 +1,64 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long int area(vector <int> &heights){
-	stack <pair<int,int>> rect;
-	stack <pair<int,int>> revrect;
-	int n = heights.size();
-	vector <pair<int,int>> spread(n);
-	if(n == 0)
+int area(vector <int> &a){
+	stack <int> s;
+	int n = a.size();
+	int ar=0;
+
+	if(n==0)
 		return 0;
-	if(n == 1)
-		return heights[0];
 
-	rect.push( {heights[0], 0} );
-	for(int i=1; i<n; i++){
-		int cnt=0;
+	s.push(0);
 
-		if(i == n-1){
-			while(!rect.empty()){
-				spread[ rect.top().second ].second = i-rect.top().second;
-				rect.pop();		
-			}
-			spread[ i ].second = 0;
-			break;
-		}
+	int i=1;
+	while(i < n){
+		if(a[i] >= a[ s.top() ]){
+			s.push(i);
+		}else{
+		 	while(!s.empty()){
+		 		if(a[s.top()] <= a[i])
+		 			break;
 
-		// possible error here
-		if(!rect.empty()){
-			while(heights[i] < rect.top().first){
-				spread[ rect.top().second ].second = i-rect.top().second-1;
-				rect.pop();
-				if(rect.empty())
-					break;
-			}
-		}
-		if(heights[i]!=heights[i-1])
-			rect.push( {heights[i], i} );
-	}
+		 		int temp = s.top();
+				int ar_temp;
+		 		s.pop();
 
-	revrect.push( {heights[n-1], n-1} );
-	for(int i=n-2; i>=0; i--){
-		int cnt=0;
-		
-		if(i == 0){
-			while(!revrect.empty()){
-				if(revrect.top().first <= heights[i] )
-					spread[ revrect.top().second ].first = revrect.top().second-i;
+		 		if(s.empty()){
+		 			ar_temp = a[temp]*i;
+		 		}else{
+		 			ar_temp = a[temp]*(i-temp);
+		 		}
+		 		// cout << temp<< " " << i << " "<< ar_temp << "    7\n";
+		 		if(ar_temp > ar)
+		 			ar = ar_temp;
 				
-				revrect.pop();		
-			}
-			spread[ i ].first = 0;
-			break;
-		}
-
-		// possible error here
-		if(!revrect.empty()){
-			while(heights[i] < revrect.top().first){
-				spread[ revrect.top().second ].first = revrect.top().second-i-1;
-				revrect.pop();
-				if(revrect.empty())
-					break;
-			}
-		}
-
-		if(heights[i] != heights[i+1])
-			revrect.push( {heights[i], i} );
+	 		}
+	 		s.push(i);
+	 	}
+	 	i++;
 	}
 
-	for(int i=0; i<n; i++){
-		cout << spread[i].first << " " << spread[i].second << '\n'; 
+	while(!s.empty()){
+ 		int temp = s.top();
+ 		s.pop();
+		int ar_temp;
+
+ 		if(s.empty()){
+ 			ar_temp = a[temp]*i;
+ 		}else{
+ 			ar_temp = a[temp]*(i-temp);
+ 		}
+		// cout << temp<<" "<< ar_temp << '\n';
+
+ 		if(ar_temp > ar)
+ 			ar = ar_temp;
 	}
 
-	long int maxim=0;
-	for(int i=0; i<n; i++){
-		int t_area = heights[i]*(1+spread[i].first+spread[i].second);
-		if(t_area > maxim){
-			maxim = t_area;
-		}
-	}
-
-	return maxim;
+	return ar;
 }
 
-long int solve(){
+int solve(){
 	int n;
 	cin >> n;
 
