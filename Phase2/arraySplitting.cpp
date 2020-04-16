@@ -1,37 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool decres(pair <int,int> &a, pair <int,int> &b){
-	return a.first > b.first;
-}
-
-bool post_sort(pair <int,int> &a, pair <int,int> &b){
-	return a.second < b.second;
+bool decr(long long int &a, long long int &b){
+	return a>b;
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n, k;
+	long long int n, k;
 	cin >> n >> k;
 
-	vector < pair <int,int> > a(n);
-	vector <bool> b(n, false);
-	b[0] = true;
+	long long int a[n];
+	long long int suff[n];
 
-	int x;
-	for(int i=0; i<n; i++){
-		cin >> x;
-		a[i].first = x;
-		a[i].second = i;
+	for(long int i=0; i<n; i++){
+		cin >> a[i];
 	}
 
-	sort(a.begin()+1, a.end(), decres);
-
-	int i=0;
-	while(i<n-k){
-		
+	suff[n-1] = a[n-1];
+	for(long int i=n-2; i>=0; i--){
+		suff[i] = suff[i+1] + a[i];
 	}
 
+	sort(suff+1, suff+n, decr);
+
+	long long int ans = suff[0];
+
+	for(long long int i=1; i<k; i++){
+		ans += suff[i];
+	}
+
+	cout << ans << '\n';
+	return 0;
 }
