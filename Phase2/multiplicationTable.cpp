@@ -2,13 +2,13 @@
 #define ll long long int
 using namespace std;
 
-int cnt(int x, int i, int m){
-	return min((x-1)/i, m);
+ll cnt(ll x, ll i, ll m){
+	return min((x-1)/i, m);	//check
 }
 
-int check(int n, int x, int m){
-	int sum=0;
-	for(int i=1; i<=n; i++){
+ll check(ll n, ll x, ll m){
+	ll sum=0;
+	for(ll i=1; i<=n; i++){
 		sum += cnt(x, i, m);
 	}
 	return sum;
@@ -18,22 +18,19 @@ int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n, m, k;
+	ll n, m, k;
 	cin >> n >> m >> k;
 
-	int i=0, j=m-1;
+	ll i=1, j=n*m+1;
 
-	int ans=0;
-	while(i<n && j>=0){
-		int temp = check(n, (i+1)*(j+1), m);
-		if(temp > k){
-			j--;
-		}else{
-			if(temp > ans)
-				ans = temp;
-			i++;
-		}
+	while(i<j){
+		ll temp = (i+j)/2;
+
+		if(check(n, temp, m) < k)
+			i = temp+1;
+		else
+			j = temp;
 	}
 
-	cout << ans << '\n';
+	cout << i-1 << '\n';
 }
