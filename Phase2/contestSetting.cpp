@@ -3,23 +3,40 @@
 using namespace std;
 int ans=0;
 
-void permut(vector<pair<int,int>> in, vector<pair<int,int>> out, int i, long int temp, int k){
+void permut(vector<pair<int,int>> &in, vector<pair<int,int>> &out, int i, long int temp, int k){
+	// similar to C(n, 0)
 	if(out.size() >= k){
 		ans += temp;
 		ans %= p;
 		return;
 	}
-	if(i - out.size() > in.size()-k)
-		return;
-	if(i >= in.size())
-		return;
 
+	// similar to C(n, n)
+	if(in.size()-i == k-out.size()){
+		for(int j=i; j<in.size(); j++){
+			temp *= in[j].second;
+			temp %= p;
+		}
+		ans += temp;
+		ans %= p;
+		return;
+	}
+
+	// end of elements
+	if(i >= in.size()){
+		return;
+	}
+
+	// in[i] not selected
 	permut(in, out, i+1, temp, k);
+	
 	out.push_back(in[i]);
 	temp *= in[i].second;
 	temp %= p;
-	// add mod thing
+
+	// in[i] selected
 	permut(in, out, i+1, temp, k);
+	out.pop_back();				// Backtracking
 	return;
 }
 

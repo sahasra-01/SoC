@@ -11,7 +11,7 @@
 x^k in this
 
 
-arraw of size 9
+array of size 9
 ___________________________________________________
 Array Splliting
 
@@ -36,3 +36,66 @@ Array Splliting
 
 
 generate suffix sum
+
+
+______________________________________________________________________
+Make Palindrome
+
+
+heallleh
+
+if(odd){
+	if(palin)
+		(no of same char in the mid)+1
+	else
+		0
+}else{
+	if(palin)
+		(no of same char in the mid)+1
+	else
+		0
+}
+
+
+________________________________________________________________________
+
+
+BBBWBBBBBWB
+
+8 6
+
+1 0 0 0
+0 1 1 0
+
+
+1 1 1 2 2 2 2 2 1
+
+BWBBBBBB
+
+
+
+BWW
+
+WBW
+
+A-1 2 4 5 7 8 10 11
+C-3 6 9 12
+
+BBWW
+
+WBBWBwB
+
+
+
+BBBWBB
+
+_______________________________________________________________________
+
+
+1 2 3 4 9
+
+
+
+
+
+
