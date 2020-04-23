@@ -34,3 +34,14 @@ int main(){
 
 	cout << i-1 << '\n';
 }
+
+/*
+6 2 5
+7
+4
+6
+5
+4
+
+explain this
+*/

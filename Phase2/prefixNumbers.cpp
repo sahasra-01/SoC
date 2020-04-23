@@ -1,33 +1,68 @@
-#include <bits/stdc++.h>
-#include <boost/lexical_cast.hpp>
-#define mint 1000000000000000000
-using namespace std;
+#include <bits/stdc++.h> 
+using namespace std; 
 
-bool pref(string &a, string &b){
-	for(int i=0; i<a.length(); i++){
-		if(a[i] != b[i])
-			return false;
-	}
-	return true;
+void solve(){
+    long long unsigned int x, y, z;
+    cin >> x >> y;
+	z = x;
+    long long unsigned int i = 1;
+    while(z <= 1e18){
+        z = x*i;
+        if(z%y == 0) break; 
+        long long unsigned int value_add = y-(z%y);
+        if(value_add < i){
+            z += value_add;
+            break;
+        }
+        
+        i *= 10;
+    }
+    if(z <= 1e18)
+    	cout << z << '\n';
+    else 
+    	cout << -1 << '\n';
+    return ;
 }
 
-long long solve(){
-	long long x, y;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    int T;
+    cin >> T;
+    while(T--)
+        solve();
+}
+
+
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int solve(){
+	long long unsigned int x, y, z;
 	cin >> x >> y;
+	z=x;
+	long long unsigned int i=1;
+	if(x==0)
+		return y;
 
-	for(long long z=y; z<=10000000000000; z+=y){
-		string a, b;
-		ostringstream temp1, temp2;
-		temp1 << x;
-		temp2 << z;
-
-		a = temp1.str();
-		b = temp2.str();
-
-		if(pref(a, b))
+	while(z <= 1e18){
+		z = x*i;
+		
+		if(z%y==0)
 			return z;
+
+		long long unsigned int temp = y-(z%y);
+		if(temp < i){
+			return z+temp;
+		}
+		i*=10;
 	}
-	return -1;
+	return z;
 }
 
 int main(){
@@ -37,6 +72,12 @@ int main(){
 	int T;
 	cin >> T;
 	while(T--){
-		cout << solve() << '\n';
+		long long unsigned int x = solve();
+		if(x <= 1e18)
+			cout << x << '\n';
+		else
+			cout << "-1\n";
 	}
 }
+
+*/
