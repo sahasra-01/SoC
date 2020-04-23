@@ -1,57 +1,51 @@
 #include <bits/stdc++.h>
-#define p 998244353
+#define ll long long int
+const ll p { 998244353 } ;
 using namespace std;
-int ans=0;
 
-void permut(vector<pair<int,int>> &in, vector<pair<int,int>> &out, int i, long int temp, int k){
-	// similar to C(n, 0)
-	if(out.size() >= k){
-		ans += temp;
-		ans %= p;
-		return;
-	}
+void pascal(vector <pair<ll,ll>> &a, ll n, ll k){
+	ll psc[n+1][n+1];
+	psc[0][0] = 1;
 
-	// similar to C(n, n)
-	if(in.size()-i == k-out.size()){
-		for(int j=i; j<in.size(); j++){
-			temp *= in[j].second;
-			temp %= p;
+	for(ll line=1; line<=n; line++){
+		for(ll i=0; i<=line; i++){
+			if(i==line){
+				psc[line][i] = ( (a[line-1].second)*(psc[line-1][line-1]) )%p;
+			}
+			
+			else if(i == 0)
+				psc[line][i] = 1;
+			
+			else{
+				psc[line][i] = ( (psc[line-1][i-1])*(a[line-1].second) + psc[line-1][i] )%p;
+			}
+			
+			// psc[line][i-1] %= p;
+			// cout << psc[line][i] << " ";
 		}
-		ans += temp;
-		ans %= p;
-		return;
+		// cout << '\n';
 	}
 
-	// end of elements
-	if(i >= in.size()){
-		return;
-	}
-
-	// in[i] not selected
-	permut(in, out, i+1, temp, k);
-	
-	out.push_back(in[i]);
-	temp *= in[i].second;
-	temp %= p;
-
-	// in[i] selected
-	permut(in, out, i+1, temp, k);
-	out.pop_back();				// Backtracking
-	return;
+	cout << ((psc[n][k])%p) << "\n";
 }
 
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n, k;
+	ll n, k;
 	cin >> n >> k;
 
-	map <int, int> m;
-	vector< pair<int,int> > a;
+	if(n == 0){
+		cout << "0\n";
+		return 0;
+	}
 
-	int t1;
-	for(int i=0; i<n; i++){
+	map <ll, ll> m;
+	vector< pair<ll,ll> > a;
+
+	ll t1;
+	for(ll i=0; i<n; i++){
 		cin >> t1;
 		m[t1]++;
 	}
@@ -60,10 +54,15 @@ int main(){
 		a.push_back({it->first, it->second});
 	}
 
-	vector< pair<int,int> > out;
+	if(k > a.size()){
+		cout << "0\n";
+		return 0;
+	}
+/*
+	for(auto it=a.begin(); it!= a.end(); it++)
+		cout << it->second << " ";
+	cout << '\n';*/
 
-	long int t=1;
-	permut(a, out, 0, t, k);
+	pascal(a, a.size(), k);
 
-	cout << ans << '\n';
 }
