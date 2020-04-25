@@ -1,4 +1,4 @@
-#include <bits/stdc++.h> 
+/*#include <bits/stdc++.h> 
 using namespace std; 
 
 void solve(){
@@ -35,14 +35,14 @@ int main()
     while(T--)
         solve();
 }
+*/
 
 
 
-/*
 #include <bits/stdc++.h>
 using namespace std;
 
-int solve(){
+long long unsigned int solve(){
 	long long unsigned int x, y, z;
 	cin >> x >> y;
 	z=x;
@@ -51,9 +51,9 @@ int solve(){
 		return y;
 
 	while(z <= 1e18){
-		z = x*i;
+		z = (x*i);
 		
-		if(z%y==0)
+		if((z%y)==0)
 			return z;
 
 		long long unsigned int temp = y-(z%y);
@@ -68,6 +68,7 @@ int solve(){
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
+	cout.tie(NULL);
 
 	int T;
 	cin >> T;
@@ -79,5 +80,3 @@ int main(){
 			cout << "-1\n";
 	}
 }
-
-*/
